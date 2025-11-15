@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  web:
+    image: nginx:stable-alpine
+    container_name: nginx_practica6
+    ports:
+      - "80:80"
+    volumes:
+      - ./src:/usr/share/nginx/html:ro
+    restart: unless-stopped
